@@ -21,29 +21,29 @@ def tri_insertion(A: list):
     #count = 0                                 # question 3
 
     ##### à coder #####
-
-
-
-
-
-
-
-
-
-
-
+    prev = A[0]
+    cpt= 0
+    for n in A:
+        if n < prev:
+            A[A.index(n)] = prev
+            A[A.index(prev)] = n
+            cpt += 1
+            tri_insertion(A)
+        prev = n
 
     ##### fin code #####
 
-    #print("taille A :", len(A))                # question 3
-    #print("nombre d'execution :", count)         # question 3
+    print("taille A :", len(A))                # question 3
+    print("nombre d'execution :", cpt)         # question 3
     ######
     return A
 
 
+
+
 if __name__ == "__main__":
-    A: list = [2, 5, 4, 7, 9, 0, -1]    # question 1 et 2
-    #A: list = [2, 1]                   # question 3.1
+    # A: list = [2, 5, 4, 7, 9, 0, -1]    # question 1 et 2
+    # A: list = [2, 1]                   # question 3.1
     #A: list = [3, 2, 1]                # question 3.2
     #A: list = [4, 3, 2, 1]             # question 3.3
     #A: list = [5, 4, 3, 2, 1]          # question 3.4

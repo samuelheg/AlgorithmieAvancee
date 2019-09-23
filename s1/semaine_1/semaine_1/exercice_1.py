@@ -15,11 +15,15 @@ def moy_tableau_1(A: list):
     :param A: tableau de réel
     :return: moy:float la moyenne
     """
-    moy: float          # resultat
+    moy: float = 0         # resultat
     n: int = len(A)     # taille du tableau
     somme: float = 0    # somme des valeurs du tableau
-    #i: int =
+    i: int = 0
     ##### à coder #####
+    if n > 0:
+        while i < n:
+            somme += A[i]
+            i += 1
 
 
 
@@ -27,7 +31,7 @@ def moy_tableau_1(A: list):
 
 
     ##### fin code #####
-    moy = somme / n
+    moy = somme/n
     return moy
 
 
@@ -40,8 +44,12 @@ def moy_tableau_2(A: list):
     moy: float  # resultat
     n: int = len(A)  # taille du tableau
     somme: float = 0  # somme des valeurs du tableau
-    #i: int =
+    i: int = 0
     ##### à coder #####
+    if n > 0:
+        while i < n:
+            somme += A[i]
+        moy = somme/n
 
 
 
@@ -50,7 +58,6 @@ def moy_tableau_2(A: list):
 
 
     ##### fin code #####
-    moy = somme / n
     return moy
 
 
@@ -63,11 +70,15 @@ def moy_tableau_3(A: list):
     """
     moy: float  # resultat
     n: int = len(A)  # taille du tableau
-    #i: int =
+    somme: float = 0  # somme des valeurs du tableau
+    i: int = 0
     ##### à coder #####
+    if n > 0:
+        while i < n:
+            somme += A[i]
+            i+=1
+        moy = somme/n
 
-
-    #moy += moy / n
 
 
 
@@ -78,8 +89,8 @@ def moy_tableau_3(A: list):
 if __name__ == "__main__":
     A: list = [3.5, 4.5, 2.0, 6.0]
 
-    moy = moy_tableau_1(A)      # question 1.
+    #moy = moy_tableau_1(A)      # question 1.
     #moy = moy_tableau_2(A)     # question 2.
-    #moy = moy_tableau_3(A)     # quesiton 3.
+    moy = moy_tableau_3(A)     # quesiton 3.
 
     print("moyenne =", moy)
