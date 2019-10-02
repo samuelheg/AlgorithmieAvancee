@@ -20,6 +20,7 @@ def sum_of_n(n: int):
     :param n: int taille de l'entrée
     :return: somme: int, temps: float
     """
+
     somme: int = 0
     temps: float = 0
     ##### à coder #####
