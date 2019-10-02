@@ -18,6 +18,14 @@ def recherche_rec(a_liste: list, x: int):
     :return: True si trouvé False sinon
     """
 
+    if len(a_liste) == 0:
+        print("False")
+        return False
+    elif a_liste[0] == x:
+        print("True")
+        return True
+    else:
+        return recherche_rec(a_liste[1:], x)
 
 
 
@@ -52,9 +60,9 @@ if __name__ == "__main__":
     assert recherche_rec([1, 2, 3, 1], 3)
     assert not recherche_rec([1, 2, 1, 2], 3)
 
-    assert not recherche_mat_rec([], 3)
-    assert not recherche_mat_rec([[]], 3)
-    assert not recherche_mat_rec([[1]], 3)
-    assert recherche_mat_rec([[3], [1]], 3)
-    assert recherche_mat_rec([[1, 2], [3, 1]], 3)
-    assert not recherche_mat_rec([[1, 2], [1, 2]], 3)
+    # assert not recherche_mat_rec([], 3)
+    # assert not recherche_mat_rec([[]], 3)
+    # assert not recherche_mat_rec([[1]], 3)
+    # assert recherche_mat_rec([[3], [1]], 3)
+    # assert recherche_mat_rec([[1, 2], [3, 1]], 3)
+    # assert not recherche_mat_rec([[1, 2], [1, 2]], 3)
